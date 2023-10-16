@@ -43,7 +43,7 @@ def get_birthdays_per_week(users):
     for k, v in birthdays_by_weekday.items():
         res_list.append(k + ": " + (", ").join(v))
     res_str = ("\n").join(res_list)
-    return print(res_str)
+    return res_str
 
 
 # тестовий словник
@@ -62,5 +62,5 @@ users = [{"name": "Ivan Golovko", "birthday": datetime(1955, 10, 13)},
          {"name": "Svetlana Kuzub", "birthday": datetime(1979, 10, 23)}
          ]
 
-# перевірка роботи функції
-get_birthdays_per_week(users)
+if __name__ == "__main__":
+    print(get_birthdays_per_week(users))
